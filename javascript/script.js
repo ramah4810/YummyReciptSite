@@ -232,7 +232,7 @@ $(document).ready(function () {
                       ${getTagsList(meal.strTags)}
                   </ul>
                   <a target="_blank" href="${meal.strSource}" class="btn btn-success">Source</a>
-                  <a target="_blank" href="https://www.youtube.com/watch?v=${meal.strYoutube}" class="btn btn-danger">Youtube</a>
+                  <a target="_blank" href="${meal.strYoutube}" class="btn btn-danger">Youtube</a>
               </div>`;
          instructionsPg.append(detailsHTML);
       });
