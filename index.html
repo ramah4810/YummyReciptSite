@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="main-sec min-vh-100 bg-black">
+        <div class="container position-relative p-5">
+
+            <div id="loadingSpinner" class="spinner-overlay d-none">
+                <div class="spinner"></div>
+             </div>
+
+            <div class="row first-grid h-25" id="dataRow">
+            </div>
+
+            <div class="searchInputs w-100 d-none gap-3 m-auto">
+                <input id="searchByName" type="text" class="form-control bg-black text-white"
+                    placeholder="Search By Name">
+                <input id="searchByLetter" type="text" class="form-control bg-black text-white"
+                    placeholder="Search By First Letter">
+            </div>
+
+            <div class="row search-grid d-none mt-4 h-25">
+                <!-- <div class="col-md-3">
+                    <div class="meal rounded rounded-2 position-relative overflow-hidden cursor-pointer">
+                        <img src="images/58oia61564916529.jpg" alt="" class="w-100">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Corba</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal rounded rounded-2 position-relative overflow-hidden cursor-pointer">
+                        <img src="images/g046bb1663960946.jpg" alt="" class="w-100">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Sushi</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal rounded rounded-2 position-relative  overflow-hidden cursor-pointer">
+                        <img src="images/tkxquw1628771028.jpg" alt="" class="w-100">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Corba</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal rounded rounded-2 position-relative  overflow-hidden cursor-pointer">
+                        <img src="images/4pqimk1683207418.jpg" alt="" class="w-100">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Corba</h3>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="row instructions-pg text-white py-4 d-none">
+                <div class="col-md-4">
+                    <img class="w-100 rounded-3" src="images/4pqimk1683207418.jpg" alt="">
+                    <h2>Corba</h2>
+                </div>
+                <div class="col-md-8">
+                    <h2>Instructions</h2>
+                    <p>Pick through your lentils for any foreign debris, rinse them 2 or 3 times, drain, and set aside.
+                        Fair warning, this will probably turn your lentils into a solid block that you’ll have to break
+                        up later
+                        In a large pot over medium-high heat, sauté the olive oil and the onion with a pinch of salt for
+                        about 3 minutes, then add the carrots and cook for another 3 minutes.
+                        Add the tomato paste and stir it around for around 1 minute. Now add the cumin, paprika, mint,
+                        thyme, black pepper, and red pepper as quickly as you can and stir for 10 seconds to bloom the
+                        spices. Congratulate yourself on how amazing your house now smells.
+                        Immediately add the lentils, water, broth, and salt. Bring the soup to a (gentle) boil.
+                        After it has come to a boil, reduce heat to medium-low, cover the pot halfway, and cook for
+                        15-20 minutes or until the lentils have fallen apart and the carrots are completely cooked.
+                        After the soup has cooked and the lentils are tender, blend the soup either in a blender or
+                        simply use a hand blender to reach the consistency you desire. Taste for seasoning and add more
+                        salt if necessary.
+                        Serve with crushed-up crackers, torn up bread, or something else to add some extra thickness.
+                        You could also use a traditional thickener (like cornstarch or flour), but I prefer to add
+                        crackers for some texture and saltiness. Makes great leftovers, stays good in the fridge for
+                        about a week.</p>
+                    <h3><strong>Area:</strong> Turkish</h3>
+                    <h3><strong>Category:</strong> Side</h3>
+                    <h3><strong>Recipes:</strong></h3>
+                    <ul class="list-unstyled d-flex g-3 flex-wrap">
+                        <li class="alert alert-info m-2 p-1">1 cup Lentils</li>
+                        <li class="alert alert-info m-2 p-1">1 large Onion</li>
+                        <li class="alert alert-info m-2 p-1">1 large Carrots</li>
+                        <li class="alert alert-info m-2 p-1">1 tbs Tomato Puree</li>
+                        <li class="alert alert-info m-2 p-1">2 tsp Cumin</li>
+                        <li class="alert alert-info m-2 p-1">1 tsp Paprika</li>
+                        <li class="alert alert-info m-2 p-1">1/2 tsp Mint</li>
+                        <li class="alert alert-info m-2 p-1">1/2 tsp Thyme</li>
+                        <li class="alert alert-info m-2 p-1">1/4 tsp Black Pepper</li>
+                    </ul>
+                    <h3><strong>Tags:</strong></h3>
+                    <ul class="list-unstyled d-flex g-3 flex-wrap">
+                        <li class="alert alert-danger m-2 p-1">Soup</li>
+                    </ul>
+                    <a target="_blank" href="#" class="btn btn-success">Source</a>
+                    <a target="_blank" href="#" class="btn btn-danger">Youtube</a>
+                </div>
+            </div>
+
+            <div class="row cat-grid d-none">
+                <!-- <div class="col-md-3">
+                    <div class="cat position-relative overflow-hidden rounded-2 cursor-pointer">
+                        <img src="images/beef.png" alt="beef" class="w-100">
+                        <div class="cat-layer position-absolute text-black text-center">
+                            <h3>Beef</h3>
+                            <p class="fs-6">Beef is the culinary name for meat</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3">
+                    <div class="cat position-relative overflow-hidden rounded-2 cursor-pointer">
+                        <img src="images/chicken.png" alt="beef" class="w-100">
+                        <div class="cat-layer position-absolute text-black text-center">
+                            <h3>Beef</h3>
+                            <p class="fs-6">Beef is the culinary name for meat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cat">
+                        <img src="images/dessert.png" alt="beef" class="w-100">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cat">
+                        <img src="images/lamb.png" alt="beef" class="w-100">
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="row catMealsBg d-none">
+                <div class="col-md-3">
+                    <div id="" class="meal rounded rounded-2 position-relative overflow-hidden cursor-pointer">
+                        <img src="images/58oia61564916529.jpg" alt="" class="w-100">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Corba</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row area-grid d-none">
+                <!-- <div class="col-md-3 text-center cursor-pointer">
+                    <i class="fa-solid fa-house-laptop fa-4x text-white area"></i>
+                    <h3 class="text-white">America</h3>
+                </div>
+                <div class="col-md-3 text-center cursor-pointer">
+                    <i class="fa-solid fa-house-laptop fa-4x text-white"></i>
+                    <h3 class="text-white">British</h3>
+                </div>
+                <div class="col-md-3 text-center cursor-pointer">
+                    <i class="fa-solid fa-house-laptop fa-4x text-white"></i>
+                    <h3 class="text-white">Canadian</h3>
+                </div>
+                <div class="col-md-3 text-center cursor-pointer">
+                    <i class="fa-solid fa-house-laptop fa-4x text-white"></i>
+                    <h3 class="text-white">Chinese</h3>
+                </div> -->
+            </div>
+
+            <div class="row areaMealsBg d-none">
+                <!-- <div class="col-md-3">
+                    <div id="" class="meal rounded rounded-2 position-relative overflow-hidden cursor-pointer">
+                        <img src="images/58oia61564916529.jpg" alt="" class="w-100">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Corba</h3>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="row ingred-grid d-none">
+                <!-- <div class="col-md-3">
+                    <div  class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-drumstick-bite fa-4x text-white"></i>
+                        <h3 class="text-white">Chicken</h3>
+                        <p class="text-white">The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div  class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-drumstick-bite fa-4x text-white"></i>
+                        <h3 class="text-white">Salmon</h3>
+                        <p class="text-white">The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div  class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-drumstick-bite fa-4x text-white"></i>
+                        <h3 class="text-white">Beef</h3>
+                        <p class="text-white">The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div  class="rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-drumstick-bite fa-4x text-white"></i>
+                        <h3 class="text-white">Pork</h3>
+                        <p class="text-white">The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="row ingredMealsBg d-none">
+                <!-- <div class="col-md-3">
+                    <div id="" class="meal rounded rounded-2 position-relative overflow-hidden cursor-pointer">
+                        <img src="images/58oia61564916529.jpg" alt="" class="w-100">
+                        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Corba</h3>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="contact d-none min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="container w-75 text-center">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                            <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Special characters and numbers not allowed
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="emailInput" type="email" class="form-control " placeholder="Enter Your Email">
+                            <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Email not valid *example@yahoo.com
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="phoneInput" type="text" class="form-control " placeholder="Enter Your Phone">
+                            <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Enter valid Phone Number
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="ageInput" type="number" class="form-control " placeholder="Enter Your Age">
+                            <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Enter valid age
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="passwordInput" type="password" class="form-control "
+                                placeholder="Enter Your Password">
+                            <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Enter valid password *Minimum eight characters, at least one letter and one number:*
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="repasswordInput" type="password" class="form-control " placeholder="Repassword">
+                            <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                The passwords do not match!
+                            </div>
+                        </div>
+                    </div>
+                    <button id="submitBtn" disabled="" class="btn btn-outline-danger px-2 mt-3">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="sideBar" class="d-flex z-2 position-fixed">
+        <div id="sideMenu" class="sideMenu bg-black d-flex">
+            <div class="d-flex flex-column justify-content-between">
+                <ul id="myList" class="myList list-unstyled mt-5 pe-5">
+                    <li class="me ps-4"><a id="search" class="show text-white text-decoration-none fs-6"
+                            href="#">Search</a></li>
+                    <li class="py-2 ps-4 pe-5"><a id="categories" class="text-white text-decoration-none fs-6"
+                            href="#">Categories</a></li>
+                    <li class="py-2 ps-4"><a id="area" class="text-white text-decoration-none fs-6" href="#">Area</a>
+                    </li>
+                    <li class="py-2 ps-4"><a id="ingredients" class="text-white text-decoration-none fs-6"
+                            href="#">Ingredients</a></li>
+                    <li class="py-2 ps-4"><a id="contact" class="text-white text-decoration-none fs-6" href="#">Contact
+                            Us</a></li>
+                </ul>
+                <footer class="ps-3 pb-3">
+                    <div class="icons d-flex text-white">
+                        <i class="fa-brands fa-facebook pe-1 fs-7"></i>
+                        <i class="fa-brands fa-twitter pe-1 fs-7"></i>
+                        <i class="fa-solid fa-globe pe-1 fs-7"></i>
+                    </div>
+                    <small class="text-white fs-7 fw-light">Copyright Â© 2019 All RightsReserved.</small>
+                </footer>
+            </div>
+            <div class="menu-key fs-2 p-3 bg-white d-flex flex-column justify-content-between">
+                <span class="logo"><img src="images/logo.png" alt="logo" class="w-100"></span>
+                <i class="fa-solid fa-bars fa-2x fa-align-justify fs-2 text-black cursor-pointer" id="openBtn"></i>
+                <i class="fa-solid fa-xmark fa-2x fa-x fs-2 text-black cursor-pointer d-none" id="closeBtn"></i>
+                <div class="small-icons fs-6 align-self-center">
+                    <i class="fa-solid fa-globe cursor-pointer"></i>
+                    <i class="fa-solid fa-share-nodes cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/jquery-3.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

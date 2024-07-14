@@ -1,0 +1,106 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+#sideBar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 208px;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.menu-key {
+    width: 55px;
+}
+
+.logo {
+    width: 43px;
+    align-self: center;
+}
+
+
+.fs-7 {
+    font-size: 12px;
+}
+
+.myList {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s, transform 0.9s;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.meal-layer , .cat-layer{
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: .5s;
+    opacity: 0;
+}
+
+.meal:hover .meal-layer {
+    top: 0;
+    opacity: 1;
+}
+
+.searchInputs input::placeholder{
+    color: gray !important;
+}
+
+.cat:hover .cat-layer{
+    opacity: 1;
+    top: 0;
+}
+
+.overlay-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9;
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+ }
+ 
+ .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 3s linear infinite;
+ }
+ 
+ @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+ }
+ 
